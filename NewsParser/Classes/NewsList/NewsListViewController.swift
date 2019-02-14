@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import SafariServices
 
 class NewsListViewController: UIViewController {
@@ -30,12 +31,38 @@ class NewsListViewController: UIViewController {
     private func setupUI() {
         
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
+//        tableView.estimatedRowHeight = 100
         tableView.insertSubview(refreshControl, at: 0)
     }
     
     private func setupBindings() {
-        
+      
+      viewModel.news
+        .observeOn(MainScheduler.instance)
+        .do(onNext: { [weak self] _ in self?.refreshControl.endRefreshing() })
+        .bind(to: tableView.rx.items(cellIdentifier: "NewsCell", cellType: NewsCell.self)) { [weak self] (_, news, cell) in
+          self?.setupNewsCell(cell, news: news) }
+        .disposed(by: disposeBag)
+      
+      viewModel.navigationTitle
+        .bind(to: navigationItem.rx.title)
+        .disposed(by: disposeBag)
+      
+      viewModel.showNews
+        .subscribe(onNext: { [weak self] in self?.openNews($0) })
+        .disposed(by: disposeBag)
+      
+      viewModel.alertMessage
+        .subscribe(onNext: { [weak self] in self?.presentAlert(message: $0) })
+        .disposed(by: disposeBag)
+      
+      refreshControl.rx.controlEvent(.valueChanged)
+        .bind(to: viewModel.reload)
+        .disposed(by: disposeBag)
+      
+      tableView.rx.modelSelected(NewsViewModel.self)
+        .bind(to: viewModel.selectedNews)
+        .disposed(by: disposeBag)
     }
     
     private func setupNewsCell(_ cell: NewsCell, news: NewsViewModel) {
@@ -53,6 +80,7 @@ class NewsListViewController: UIViewController {
     // MARK: - Navigation
     
     private func openNews(_ url: URL) {
+        print(url)
         let safariViewController = SFSafariViewController(url: url)
         navigationController?.pushViewController(safariViewController, animated: true)
     }

@@ -30,11 +30,12 @@ class NetworkingManager {
             .flatMap({ (json) -> Observable<[NewsJSON]> in
                 guard
                     let json = json as? [String:Any],
-                    let itemsJSON = json["articles"] as? [String: Any]
+                    let itemsJSON = json["articles"] as? [[String: Any]]
                 else { return Observable.error(ServiceError.cannotParse) }
-                
-                let news = itemsJSON.flatMap(<#T##transform: ((key: String, value: Any)) throws -> Sequence##((key: String, value: Any)) throws -> Sequence#>)
-                return Observable.just(news)
+              let news = itemsJSON.compactMap({ (dict) -> NewsJSON in
+                return NewsJSON.init(from: dict)!
+              })
+              return Observable.just(news)
             })
     }
 }

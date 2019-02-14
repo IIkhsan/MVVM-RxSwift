@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F2858247220EFCE500CBCEB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2858246220EFCE500CBCEB2 /* AppDelegate.swift */; };
-		F2858249220EFCE500CBCEB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2858248220EFCE500CBCEB2 /* ViewController.swift */; };
 		F285824C220EFCE500CBCEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285824A220EFCE500CBCEB2 /* Main.storyboard */; };
 		F285824E220EFCE700CBCEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F285824D220EFCE700CBCEB2 /* Assets.xcassets */; };
 		F2858251220EFCE700CBCEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285824F220EFCE700CBCEB2 /* LaunchScreen.storyboard */; };
 		F2858259220EFD0200CBCEB2 /* Task in Resources */ = {isa = PBXBuildFile; fileRef = F2858258220EFD0200CBCEB2 /* Task */; };
 		F2858261220F093700CBCEB2 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2858260220F093700CBCEB2 /* NewsListViewController.swift */; };
-		F2858263220F0A7700CBCEB2 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2858262220F0A7700CBCEB2 /* NewsCell.swift */; };
 		F2858265220F0A8D00CBCEB2 /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2858264220F0A8D00CBCEB2 /* NewsListViewModel.swift */; };
 		F2858267220F0C2600CBCEB2 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2858266220F0C2600CBCEB2 /* NewsViewModel.swift */; };
 		F285826D220F19D800CBCEB2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F285826B220F19D800CBCEB2 /* RxSwift.framework */; };
@@ -24,19 +22,18 @@
 		F285827F2210D19700CBCEB2 /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285827D2210D19600CBCEB2 /* News+CoreDataClass.swift */; };
 		F28582802210D19700CBCEB2 /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285827E2210D19600CBCEB2 /* News+CoreDataProperties.swift */; };
 		F2858282221166CC00CBCEB2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2858281221166CC00CBCEB2 /* CoreDataStack.swift */; };
+		F28582D32215654200CBCEB2 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28582D22215654200CBCEB2 /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F2858243220EFCE500CBCEB2 /* NewsParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2858246220EFCE500CBCEB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2858248220EFCE500CBCEB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F285824B220EFCE500CBCEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F285824D220EFCE700CBCEB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2858250220EFCE700CBCEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2858252220EFCE700CBCEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2858258220EFD0200CBCEB2 /* Task */ = {isa = PBXFileReference; lastKnownFileType = text; path = Task; sourceTree = "<group>"; };
 		F2858260220F093700CBCEB2 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
-		F2858262220F0A7700CBCEB2 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		F2858264220F0A8D00CBCEB2 /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
 		F2858266220F0C2600CBCEB2 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		F285826B220F19D800CBCEB2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -46,6 +43,7 @@
 		F285827D2210D19600CBCEB2 /* News+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "News+CoreDataClass.swift"; path = "../../News+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F285827E2210D19600CBCEB2 /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "News+CoreDataProperties.swift"; path = "../../News+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F2858281221166CC00CBCEB2 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F28582D22215654200CBCEB2 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +84,6 @@
 				F285825C220EFEA000CBCEB2 /* Models */,
 				F285825B220EFE9300CBCEB2 /* Managers */,
 				F285825A220EFE8400CBCEB2 /* App */,
-				F2858248220EFCE500CBCEB2 /* ViewController.swift */,
 				F2858258220EFD0200CBCEB2 /* Task */,
 			);
 			path = NewsParser;
@@ -142,9 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				F2858260220F093700CBCEB2 /* NewsListViewController.swift */,
-				F2858262220F0A7700CBCEB2 /* NewsCell.swift */,
 				F2858264220F0A8D00CBCEB2 /* NewsListViewModel.swift */,
 				F2858266220F0C2600CBCEB2 /* NewsViewModel.swift */,
+				F28582D22215654200CBCEB2 /* NewsCell.swift */,
 			);
 			path = NewsList;
 			sourceTree = "<group>";
@@ -258,12 +255,11 @@
 				F2858261220F093700CBCEB2 /* NewsListViewController.swift in Sources */,
 				F2858267220F0C2600CBCEB2 /* NewsViewModel.swift in Sources */,
 				F285827F2210D19700CBCEB2 /* News+CoreDataClass.swift in Sources */,
+				F28582D32215654200CBCEB2 /* NewsCell.swift in Sources */,
 				F28582802210D19700CBCEB2 /* News+CoreDataProperties.swift in Sources */,
 				F285827C2210A35500CBCEB2 /* NetworkingManager.swift in Sources */,
 				F2858282221166CC00CBCEB2 /* CoreDataStack.swift in Sources */,
-				F2858249220EFCE500CBCEB2 /* ViewController.swift in Sources */,
 				F2858265220F0A8D00CBCEB2 /* NewsListViewModel.swift in Sources */,
-				F2858263220F0A7700CBCEB2 /* NewsCell.swift in Sources */,
 				F2858247220EFCE500CBCEB2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
